@@ -33,7 +33,7 @@ let setRouter=(app)=>{
   let baseUrl=`${appConfig.apiVersion}/users`;
   app.post(`${baseUrl}/signup`,controller.signup);
   app.post(`${baseUrl}/signin`,controller.signin);
-  app.get(`${baseUrl}//getusers/:authToken`,auth.isAuthorized,controller.getusers);
+  app.get(`${baseUrl}/getusers/:authToken`,auth.isAuthorized,controller.getusers);
   app.post(`${baseUrl}/getsingleuser`,auth.isAuthorized,controller.getsingleuser);
   app.post(`${baseUrl}/createstory`,upload.single('image'),controller.createstory);
   app.post(`${baseUrl}/getstories`,auth.isAuthorized,controller.getstories);
