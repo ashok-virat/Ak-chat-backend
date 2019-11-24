@@ -1,7 +1,7 @@
 const controller=require('./../controller/usercontroller')
 const auth=require('./../middelwares/auth');
 const multer = require('multer');
-const appConfig=require('./../Config/appConfig');
+const appConfig=require('./../config/appConfig');
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
